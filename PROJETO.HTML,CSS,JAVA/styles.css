@@ -1,0 +1,320 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    color: #00ffcc; /* Cor neon */
+    text-shadow: 0 0 20px #00ffcc, 0 0 30px #ff00ff; /* Efeito de brilho no título */
+}
+
+p {
+    color: #ff00ff; /* Cor neon */
+    text-shadow: 0 0 15px #ff00ff; /* Efeito de brilho no texto */
+    font-family: 'VT323', monospace; /* Fonte estilo games */
+}
+
+a {
+    color: #ff00ff; /* Links em rosa neon */
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #00ffcc;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.neon-button {
+    background-color: #ff00ff; /* Cor neon */
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.5);
+    font-family: 'Orbitron', sans-serif; /* Fonte futurista */
+}
+
+.neon-button:hover {
+    background-color: #00e6b8;
+}
+
+.clock {
+    font-family: 'Orbitron', sans-serif; /* Fonte futurista */
+    font-size: 3rem;
+    color: #00ffcc;
+    text-shadow: 0 0 20px #00ffcc, 0 0 30px #ff00ff;
+    margin-top: 20px;
+}
+
+.form-container, .people-list {
+    background-image: url("img/f7de6fe65c9d2618810ff5caa89b9765_high.webp"), url("img/6a71fa834c86ac0f131c23bd3f84df7f_high.webp"), url("img/wdlb9.webp");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(255, 0, 255, 0.5);
+    margin: 20px;
+    width: 80%;
+    max-width: 600px;
+    animation: background-animation 30s infinite;
+}
+
+.form-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 15px rgba(255, 0, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-family: 'VT323', monospace;
+}
+
+.saved-forms {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.8); /* Fundo transparente */
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00ffcc;
+    max-width: 800px;
+}
+
+.person-card {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(255, 0, 255, 0.5);
+    text-align: left;
+}
+
+.person-card p {
+    margin: 5px 0;
+}
+
+.edit-button, .delete-button {
+    background-color: #ff00ff;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5), 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.edit-button:hover, .delete-button:hover {
+    background-color: #00ffcc;
+}
+
+#main-page {
+    background-image: url("img/c1484dde-2398-4352-8717-8b083d2f7acd.webp"), url("img/digital-art-men-city-futuristic-night-hd-wallpaper-preview.jpg"), url("img/premium_photo-1685148902854-9b9bb49fff08.jpg"), url("img/Cyberpunk-2077.jpg"), url("img/f9500b0a9f1ef76d64e49676686c4b25_high.webp");
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(255, 0, 255, 0.5);
+    margin: 20px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    animation: main-background-animation 30s infinite;
+}
+
+#form-page, #saved-page, #game-page {
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(255, 0, 255, 0.5);
+    margin: 20px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.game {
+    width: 100%;
+    height: 80vh;
+    border-bottom: 30px solid green;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(255, 0, 255, 0.5);
+}
+
+button {
+    background: green;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button:hover {
+    border: 2px solid green;
+    background: none;
+    color: green;
+}
+
+#back-to-home-game {
+    position: relative;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+}
+
+.game-over {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.game-over h1 {
+    font-size: 3rem;
+    color: red;
+    text-align: center;
+    margin-top: 15rem;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    right: -80px;
+    width: 80px;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.clouds {
+    width: 550px;
+    position: absolute;
+    top: 0;
+    animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+.pipe-animation {
+    animation: pipe-animation 2s infinite linear;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+.jump {
+    animation: jump 800ms ease-out;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 200px;
+    }
+    50% {
+        bottom: 200px;
+    }
+    60% {
+        bottom: 200px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes background-animation {
+    0% {
+        background-image: url("img/Cyberpunk-2077.jpg");
+    }
+    33% {
+        background-image: url("img/premium_photo-1685148902854-9b9bb49fff08.jpg");
+    }
+    66% {
+        background-image: url("img/bbc6386b9475ab5e973ec559f4c5aa9b.jpg");
+    }
+    100% {
+        background-image: url("img/8ac77feb7f8ebd8239d72af467d0ca174943c85ae7a5d6f8.avif");
+    }
+}
+
+@keyframes main-background-animation {
+    0% {
+        background-image: url("img/cyberpunk-2077_s846.jpg");
+    }
+    20% {
+        background-image: url("img/papel-de-parede-vermelho-da-cidade-cyberpunk-para-planos-de-fundo-e-projetos-de-design_941097-1064.avif");
+    }
+    40% {
+        background-image: url("img/c1484dde-2398-4352-8717-8b083d2f7acd.webp");
+    }
+    60% {
+        background-image: url("img/cyberpunk-2077-7680x4320.jpg");
+    }
+    80% {
+        background-image: url("img/07e14e9444925e859722a97fc31f4c25.jpg");
+    }
+    100% {
+        background-image: url("img/5.jpg");
+    }
+}

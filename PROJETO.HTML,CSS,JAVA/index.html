@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Cyberpunk</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main-page">
+        <h1 id="welcome-message">Bem-vindo ao Mundo Cyberpunk!</h1>
+        <p id="demo-message">EXPLORE</p>
+        <div id="clock" class="clock"></div>
+        <div class="button-container">
+            <button id="toggle-form-button" class="neon-button">Acessar Formulário</button>
+            <button id="toggle-games-button" class="neon-button">Acessar Jogos</button>
+        </div>
+    </div>
+
+    <div id="form-page" class="hidden">
+        <button id="back-to-home" class="neon-button">Voltar para Início</button>
+        <div class="form-container">
+            <form class="form js-form">
+                <label for="name">
+                    Nome
+                    <input class="form-field js-field" id="name" maxlength="120" name="Nome" required type="text">
+                    <span class="error-message" id="name-error"></span>
+                </label>
+                <label for="birth-date">
+                    Data de Nascimento
+                    <input class="form-field js-field" id="birth-date" name="Data de Nascimento" required type="date">
+                    <span class="error-message" id="birth-date-error"></span>
+                </label>
+                <label for="email">
+                    Email
+                    <input class="form-field js-field" id="email" name="Email" required type="email" placeholder="exemplo@dominio.com">
+                    <span class="error-message" id="email-error"></span>
+                </label>
+                <label for="phone">
+                    Celular
+                    <input class="form-field js-field" id="phone" name="Celular" required type="tel" placeholder="(99) 9 9999-9999">
+                    <span class="error-message" id="phone-error"></span>
+                </label>
+                <label for="cep">
+                    CEP
+                    <input class="form-field js-field" id="cep" name="CEP" required type="text" pattern="\d{5}-\d{3}" placeholder="00000-000">
+                    <span class="error-message" id="cep-error"></span>
+                </label>
+                <label for="logradouro">
+                    Logradouro
+                    <input class="form-field js-field" id="logradouro" name="Logradouro" required type="text" readonly>
+                </label>
+                <label for="bairro">
+                    Bairro
+                    <input class="form-field js-field" id="bairro" name="Bairro" required type="text" readonly>
+                </label>
+                <label for="cidade">
+                    Cidade
+                    <input class="form-field js-field" id="cidade" name="Cidade" required type="text" readonly>
+                </label>
+                <label for="uf">
+                    UF
+                    <select class="form-field js-field" id="uf" name="UF" required readonly>
+                        <option value="">Selecione</option>
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AP">AP</option>
+                        <option value="AM">AM</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MT">MT</option>
+                        <option value="MS">MS</option>
+                        <option value="MG">MG</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PR">PR</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="RJ">RJ</option>
+                        <option value="RN">RN</option>
+                        <option value="RS">RS</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="SC">SC</option>
+                        <option value="SP">SP</option>
+                        <option value="SE">SE</option>
+                        <option value="TO">TO</option>
+                    </select>
+                </label>
+                <button type="button" id="save-button" class="neon-button">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="saved-page" class="hidden">
+        <button id="back-to-form" class="neon-button">Voltar para Formulário</button>
+        <div class="saved-forms">
+            <h2>Lista de Pessoas</h2>
+            <div id="people-list" class="people-list">
+                <!-- Cartões de formulários salvos serão adicionados aqui -->
+            </div>
+        </div>
+    </div>
+
+    <div id="game-page" class="hidden">
+        <button id="back-to-home-game" class="neon-button">Voltar para Início</button>
+        <div class="game">
+            <img class="mario" src="img/mario.gif" alt="mario">
+            <img class="pipe" src="img/pipe.png" alt="cano">
+            <img class="clouds" src="img/clouds.png" alt="nuvem">
+            <button id="start-button" class="neon-button">Iniciar</button>
+        </div>
+        <div class="game-over">
+            <h1>Game Over:</h1>
+        </div>
+        <div id="distance">Distância: 0 km</div>
+        <div id="record">Recorde: 0 km</div>
+    </div>
+
+    <audio id="game-music" src="soung/super-mario-bros-super-show-intro-made-with-Voicemod.mp3" loop></audio>
+    <audio id="game-over-music" src="soung/super-mario-game-over-sound-effect-made-with-Voicemod.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
